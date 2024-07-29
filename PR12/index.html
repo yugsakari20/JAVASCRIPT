@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f3f4f6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      form {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 300px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      input[type="password"],
+      select {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      label {
+        display: block;
+        margin: 10px 0 5px;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 10px;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        background: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      input[type="submit"]:hover {
+        background: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="userdata">
+      <input type="text" id="username" placeholder="Username" /><br />
+      <input type="email" id="email" placeholder="Email" /><br />
+      <input type="number" id="number" placeholder="Number" /><br />
+      <input type="password" id="password" placeholder="Password" /><br />
+      
+      <label for="gender">Gender:</label><br />
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">Male</label><br />
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label><br />
+      <input type="radio" id="other" name="gender" value="other" />
+      <label for="other">Other</label><br />
+      
+      <label for="country">Course:</label><br />
+      <select id="country" name="country">
+        <option value="usa">Web Dev</option>
+        <option value="canada">App Dev</option>
+      </select><br />
+      
+      <input type="checkbox" id="subscribe" name="subscribe" value="newsletter" />
+      <label for="subscribe">Subscribe to newsletter</label><br />
+      
+      <input type="submit" value="Sign Up" />
+    </form>
+    <script src="./index.js"></script>
+  </body>
+</html>
