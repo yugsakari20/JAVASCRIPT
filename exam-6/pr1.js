@@ -57,32 +57,32 @@ class Book {
     buyBook() {
       if (this.#copiesAvailable > 0) {
         this.#copiesAvailable--;
-        console.log(`Book purchased successfully. Copies left: ${this.#copiesAvailable}`);
+        return (`Book purchased successfully. Copies left: ${this.#copiesAvailable}`);
       } else {
-        console.log('No copies available for purchase.');
+        return ('No copies available for purchase.');
       }
     }
   
     rentBook() {
       if (this.#copiesAvailable > 0) {
         this.#copiesAvailable--;
-        console.log(`Book rented successfully. Copies left: ${this.#copiesAvailable}`);
+        return (`Book rented successfully. Copies left: ${this.#copiesAvailable}`);
       } else {
-        console.log('No copies available for rent.');
+        return ('No copies available for rent.');
       }
     }
   
     returnBook() {
       this.#copiesAvailable++;
-      console.log(`Book returned successfully. Copies available: ${this.#copiesAvailable}`);
+      return (`Book returned successfully. Copies available: ${this.#copiesAvailable}`);
     }
 
     checkAvailability() {
-      console.log(`Copies available: ${this.#copiesAvailable}`);
+        return (`Copies available: ${this.#copiesAvailable}`);
     }
   }
   
-  const book = new Book("JavaScript: The Good Parts", "Douglas Crockford", 25, 5, 10);
+  const book = new Book("story of lion", "Douglas Crockford", 25, 15, 10);
   
   book.checkAvailability();
   book.buyBook();
