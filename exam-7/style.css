@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}                       
+.dregon{
+    display: flex;
+    justify-content: center;
+}
+img{
+    height: 419px;
+    width: 1512px;
+}
+.data{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        background-color: #fff;
+        align-items: ce;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ input{
+    width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+ }
+ 
+ input[type="submit"] {
+     background-color: #4d01ff;
+     color: #fff;
+     cursor: pointer;
+ 
+ }
