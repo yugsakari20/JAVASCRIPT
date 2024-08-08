@@ -1,3 +1,4 @@
+
 let Array = [];
 
 const del = (index) => {
@@ -6,21 +7,21 @@ const del = (index) => {
 }
 
 const buy = () => {
-    alert("Thank's For Shopping");
+    alert("Thanks for Shopping");
 }
 
 const ui = () => {
     document.getElementById("Display").innerHTML = "";
     Array.map((ele, i) => {
         let Image = document.createElement("img");
-        Image.src = ele.Image;
+        Image.src = "./img/dregon.jpeg"; 
         Image.setAttribute("class", "uiImage");
 
         let Title = document.createElement("h4");
         Title.innerHTML = ele.Title;
 
         let Price = document.createElement("p");
-        Price.innerHTML = ele.Price;
+        Price.innerHTML = "" + ele.Price;
 
         let div2 = document.createElement("div");
         div2.innerHTML = "Delete";
@@ -48,7 +49,6 @@ const handleData = (e) => {
     e.preventDefault();
 
     let Data = {
-        Image: document.getElementById("Image").value,
         Title: document.getElementById("Title").value,
         Price: document.getElementById("Price").value,
     }

@@ -1,36 +1,72 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}                       
-.dregon{
+}
+.dregon {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
-img{
+img {
     height: 419px;
-    width: 1512px;
+    width: 100%;
+    max-width: 1512px;
 }
-.data{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding: 20px;
-        background-color: #fff;
-        align-items: ce;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
- }
- input{
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: #fff;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+}
+input {
     width: 300px;
     padding: 10px;
     flex-direction: column;
     align-items: center;
- }
- 
- input[type="submit"] {
-     background-color: #4d01ff;
-     color: #fff;
-     cursor: pointer;
- 
- }
+}
+input[type="submit"] {
+    background-color: #4d01ff;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+#Display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.dis {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+}
+.uiImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+#div1 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+#div2, #div3 {
+    background-color: #4d01ff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
