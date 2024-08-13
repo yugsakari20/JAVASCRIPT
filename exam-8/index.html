@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+</head>
+
+<body>
+    <form id="StudentData">
+        <div>
+            <div>
+                <label>Student Name</label>
+                <input type="text" id="Name" required>
+            </div>
+            <div>
+                <label>Age</label>
+                <input type="number" id="Age" required>
+            </div>
+            <div>
+                <label>Course</label>
+                <input type="text" id="Course" required>
+            </div>
+            <div>
+                <input type="submit" id="Submit" value="Add Student">
+            </div>
+        </div>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Course</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
