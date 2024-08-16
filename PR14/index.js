@@ -19,7 +19,22 @@ let clock = setInterval(function time() {
 
     day.innerHTML = `${date} ${monthName[month]} ${year}`;
 
-    hour.textContent = hours < 10 ? `0${hours}` : hours;
-    minute.textContent = minutes < 10 ? `0${minutes}` : minutes;
-    second.textContent = sec < 10 ? `0${sec}` : sec;
+    if (hours < 10) {
+        hour.innerHTML = `0${hours}`;
+    } else {
+        hour.innerHTML = hours;
+    }
+
+    if (minutes < 10) {
+        minute.innerHTML = `0${minutes}`;
+    } else {
+        minute.innerHTML = minutes;
+    }
+
+    if (sec < 10) {
+        second.innerHTML = `0${sec}`;
+    } else {
+        second.innerHTML = sec;
+    }
+    
 }, 1000);
