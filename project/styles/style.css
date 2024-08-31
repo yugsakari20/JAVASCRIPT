@@ -1,0 +1,154 @@
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: #666;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f3f4f6;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #7d2ae8;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #631bb7;
+}
+
+.social-signin {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.google-signin {
+    background-color: white;
+    border: 2px solid #7d2ae8;
+    color: #7d2ae8;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.google-signin:hover {
+    background-color: #f3f4f6;
+}
+
+.login-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.login-link a {
+    color: #7d2ae8;
+    text-decoration: none;
+}
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.login-box p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background: #a64ca6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #9a48b3;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    color: #a64ca6;
+    text-decoration: none;
+}
+
+.signup {
+    margin-top: 20px;
+    color: #777;
+}
+
+.signup a {
+    color: #a64ca6;
+    text-decoration: none;
+}
