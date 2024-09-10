@@ -44,6 +44,12 @@ const Navbar = () => {
               <li class="nav-item mx-2">
                 <a class="nav-link" href="#contact">Contact</a>
               </li>
+                <li class="nav-item mx-2">
+                <a class="nav-link" href="/pages/addproduct.html">add product</a>
+              </li>
+                <li class="nav-item mx-2">
+                <a class="nav-link" href="/pages/product.html">product</a>
+              </li>
             </ul>
             <!-- login/sign up -->
             <div class="d-flex justify-content-center align-items-center gap-3">
