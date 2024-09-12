@@ -1,9 +1,9 @@
+
 import Navbar from "../components/navbar.js";
 
 document.getElementById("navbar").innerHTML = Navbar();
 
 let users = JSON.parse(localStorage.getItem("users")) || [];
-
 const getValue = (selector) => document.querySelector(selector).value;
 
 const handleData = (e) => {

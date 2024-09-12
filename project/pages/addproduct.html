@@ -10,27 +10,27 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <title>Document</title>
+    <title>Add Product</title>
   </head>
   <body>
     <div id="navbar"></div>
     <!-- form -->
     <div class="form-container">
-      <form class="product-entry-form " id="productData">
+      <form class="product-entry-form" id="productData">
           <h2>Add New Product</h2>
           <div class="input-group">
               <label for="productName" class="input-label">Product Name</label>
-              <input type="text" class="productName" class="input-field" placeholder="Enter product name" required>
+              <input type="text" id="productName" class="input-field" placeholder="Enter product name" required>
           </div>
           
           <div class="input-group">
               <label for="productPrice" class="input-label">Product Price (₹)</label>
-              <input type="number" class="productPrice" class="input-field" placeholder="Enter product price" required>
+              <input type="number" id="productPrice" class="input-field" placeholder="Enter product price" required>
           </div>
 
           <div class="input-group">
               <label for="productCategory" class="input-label">Category</label>
-              <select class="productCategory" class="select-field" required>
+              <select id="productCategory" class="select-field" required>
                   <option value="" disabled selected>Select Category</option>
                   <option value="electronics">Electronics</option>
                   <option value="fashion">Fashion</option>
@@ -40,8 +40,8 @@
           </div>
 
           <div class="input-group">
-              <label for="productImage" class="input-label">Product URl</label>
-              <input type="url" class="productImage" class="file-input" accept="image/*" required>
+              <label for="productImage" class="input-label">Product Image URL</label>
+              <input type="url" id="productImage" class="file-input" accept="image/*" required>
           </div>
 
           <div class="input-group">
@@ -51,7 +51,7 @@
 
           <button type="submit" class="submit-button">Add Product</button>
       </form>
-  </div>
+    </div>
     
     <script src="/js/addProduct.js" type="module"></script>
     <script

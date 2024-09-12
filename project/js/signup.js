@@ -1,4 +1,4 @@
-// signup.js
+
 
 import getValue from "../components/helper.js";
 import Navbar from "../components/navbar.js";

@@ -44,6 +44,9 @@ const Navbar = () => {
               <li class="nav-item mx-2">
                 <a class="nav-link" href="#contact">Contact</a>
               </li>
+               <li class="nav-item mx-2">
+                <a class="nav-link" href="/pages/cart.html">cart</a>
+              </li>
                 <li class="nav-item mx-2">
                 <a class="nav-link" href="/pages/addproduct.html">add product</a>
               </li>
