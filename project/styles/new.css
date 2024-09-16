@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #eee;
+    line-height: 1.5;
+}
+
+.heading {
+    background: linear-gradient(90deg, rgba(131,58,180,0.77) 0%, rgba(253,100,29,0.75) 50%, rgba(69,252,207,0.59) 100%);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.heading h1 {
+    color: white;
+    font-size: 50px;
+    margin: 0;
+}
+
+.offer:hover {
+    transform: scale(0.9);
+    transition: .5s;
+}
+
+.offer {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.sec3, .add, .offers, .kids {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.carousel {
+    margin: 20px 0;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #a53c3c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-bottom {
+    border-top: 1px solid white;
+    padding-top: 10px;
+    margin-top: 20px;
+}
