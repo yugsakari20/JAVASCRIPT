@@ -1,7 +1,9 @@
 import Navbar from "../components/navbar.js";
-import getValue from "../components/helper.js";
-
 document.getElementById("navbar").innerHTML = Navbar();
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("navbar").innerHTML = Navbar();
+});
 
 let users = JSON.parse(localStorage.getItem("users")) || [];
 
