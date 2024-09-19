@@ -11,41 +11,35 @@ const tstudent = document.getElementById("tstudent");
 const displayStudents = (filteredStudents) => {
     tstudent.innerHTML = ''; 
     filteredStudents.forEach((student) => {
-        let row = document.createElement('tr');
+        let tr = document.createElement('tr');
 
-        let firstNameCell = document.createElement('td');
-        firstNameCell.textContent = student.firstName;
-        row.appendChild(firstNameCell);
+        let firstName = document.createElement('td');
+        firstName.textContent = student.firstName;
 
-        let lastNameCell = document.createElement('td');
-        lastNameCell.textContent = student.lastName;
-        row.appendChild(lastNameCell);
+        let lastName = document.createElement('td');
+        lastName.textContent = student.lastName;
 
-        let fatherNameCell = document.createElement('td');
-        fatherNameCell.textContent = student.fatherName;
-        row.appendChild(fatherNameCell);
+        let fatherName = document.createElement('td');
+        fatherName.textContent = student.fatherName;
 
-        let dobCell = document.createElement('td');
-        dobCell.textContent = student.dob;
-        row.appendChild(dobCell);
+        let dob = document.createElement('td');
+        dob.textContent = student.dob;
+       
+        let tel = document.createElement('td');
+        tel.textContent = student.tel;
+        
+        let highSchool = document.createElement('td');
+        highSchool.textContent = student.highSchool;
 
-        let telCell = document.createElement('td');
-        telCell.textContent = student.tel;
-        row.appendChild(telCell);
+        let level = document.createElement('td');
+        level.textContent = student.level;
 
-        let highSchoolCell = document.createElement('td');
-        highSchoolCell.textContent = student.highSchool;
-        row.appendChild(highSchoolCell);
+        let email = document.createElement('td');
+        email.textContent = student.email;
+        
+        tr.append(firstName,  lastName, fatherName,  dob, tel, highSchool,  level,  email)
 
-        let levelCell = document.createElement('td');
-        levelCell.textContent = student.level;
-        row.appendChild(levelCell);
-
-        let emailCell = document.createElement('td');
-        emailCell.textContent = student.email;
-        row.appendChild(emailCell);
-
-        tstudent.appendChild(row);
+        tstudent.appendChild(tr);
     });
 };
 
@@ -64,16 +58,4 @@ document.getElementById("filter3")
 .addEventListener("click", () => handleCategory("3rd Year"));
 document.getElementById("filter4")
 .addEventListener("click", () => handleCategory("4th Year"));
-
-
-const search = (e) => {
-    e.preventDefault();
-
-    let searchValue = getValue("#search");
-    let temp = students.filter((ele) => ele.title.toLowerCase().includes(searchValue.toLowerCase()));
-
-
-};
-
-document.getElementById("searching").addEventListener("submit", search);
 
