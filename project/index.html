@@ -92,7 +92,31 @@
           <p>&copy; 2024 Your Website | All Rights Reserved</p>
       </div>
     </footer>
-    
+    <script>
+ function Navbar() {
+    return `
+      <nav>
+        <!-- Other navbar items -->
+        <button id="logoutBtn" style="background-color: blue; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Logout</button>
+      </nav>
+    `;
+  }
+
+  document.getElementById("navbar").innerHTML = Navbar();
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const logoutBtn = document.getElementById("logoutBtn");
+    if (logoutBtn) {
+      logoutBtn.addEventListener("click", () => {
+        localStorage.removeItem("isLogin");
+        localStorage.removeItem("username");
+        alert("You have been logged out.");
+        window.location.href = "/project/pages/login.html";
+      });
+    }
+  });
+
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

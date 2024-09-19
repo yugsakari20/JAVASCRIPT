@@ -1,29 +1,23 @@
-
 import Navbar from "../components/navbar.js";
-
 document.getElementById("navbar").innerHTML = Navbar();
 
-let users = JSON.parse(localStorage.getItem("users")) || [];
+const users = JSON.parse(localStorage.getItem("users")) || [];
+
 const getValue = (selector) => document.querySelector(selector).value;
 
 const handleData = (e) => {
   e.preventDefault();
 
-  let user = {
-    email: getValue(".email"),
-    password: getValue(".password"),
-  };
+  const email = getValue(".email");
+  const password = getValue(".password");
 
-  let isMatched = users.filter(
-    (ele) => ele.email === user.email && ele.password === user.password
-  );
+  const user = users.find((u) => u.email === email && u.password === password);
 
-  if (isMatched.length > 0) {
+  if (user) {
     alert("Login success");
-
-    localStorage.setItem("username", isMatched[0].username);
+    localStorage.setItem("username", user.username);
     localStorage.setItem("isLogin", true);
-    window.location.href = "/index.html";
+    window.location.href = "/project/index.html";
   } else {
     alert("Login failure");
   }

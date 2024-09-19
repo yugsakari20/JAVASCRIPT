@@ -1,29 +1,28 @@
-
-
-import getValue from "../components/helper.js";
 import Navbar from "../components/navbar.js";
+import getValue from "../components/helper.js";
 
 document.getElementById("navbar").innerHTML = Navbar();
 
 let users = JSON.parse(localStorage.getItem("users")) || [];
 
 const handleData = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    let user = {
-        username: getValue(".username"),
-        email: getValue(".email"),
-        password: getValue(".password"),
-        confirmpassword: getValue(".confirmpassword"),
-    };
+  const username = getValue(".username");
+  const email = getValue(".email");
+  const password = getValue(".password");
+  const confirmpassword = getValue(".confirmpassword");
 
-    
-    console.log("User Data:", user);
+  if (password !== confirmpassword) {
+    alert("Passwords do not match!");
+    return;
+  }
 
-    users.push(user);
-    localStorage.setItem("users", JSON.stringify(users));
+  const newUser = { username, email, password };
+  users.push(newUser);
+  localStorage.setItem("users", JSON.stringify(users));
 
-    window.location.href = "/index.html";
+  window.location.href = "/project/pages/login.html";
 };
 
 document.querySelector("#userData").addEventListener("submit", handleData);
