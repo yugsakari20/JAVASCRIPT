@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        background-color: #1e1e1e;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+   
+      .weather-input {
+        background-color: #2a2a2a;
+        padding: 20px;
+        border-radius: 10px;
+        color: #fff;
+        text-align: center;
+      }
+
+      .weather-input h2 {
+        margin-bottom: 20px;
+        color: #f5d700;
+      }
+
+      .weather-input input[type="text"] {
+        padding: 10px;
+        width: 200px;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 10px;
+      }
+
+      .weather-input input[type="submit"],
+      .weather-input button {
+        padding: 10px;
+        width: 220px;
+        background-color: #4c0498;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .weather-display {
+        background-color: #2a2a2a;
+        padding: 20px;
+        border-radius: 10px;
+        color: #fff;
+        text-align: center;
+        margin-left: 20px;
+      }
+
+      .weather-display h2 {
+        color: #f5d700;
+        margin-bottom: 10px;
+      }
+
+      .weather-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .weather-info .icon img {
+        width: 60px;
+      }
+
+      .weather-info .temperature h1 {
+        margin: 10px 0;
+        font-size: 48px;
+      }
+
+      .weather-info .details {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+      }
+
+      .weather-info .details p {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="weather-input">
+      <form id="form">
+        <h2>Weather App</h2>
+        <input type="text" id="city" placeholder="Enter city name" />
+        <input type="submit" value="Get Weather by City"/>
+      </form>
+    </div>
+
+    <div id="Weather"></div>
+
+     <script src="./index.js"></script>
+  </body>
+</html>
