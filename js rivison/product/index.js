@@ -8,6 +8,7 @@ const getFormData = (e) => {
     let image = document.getElementById("image").value;
 
     const product = {
+        id:Date.now(),
         title,
         price,
         image,
