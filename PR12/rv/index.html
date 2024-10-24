@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Registration</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+   <style>
+    body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+}
+
+.sidebar {
+    background-color: #00a2e8;
+    color: white;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+.sidebar img {
+    width: 100px;
+}
+
+.sidebar h5 {
+    margin-top: 50px;
+    font-size: 20px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.sidebar button {
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+.registration-form {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    max-width: 800px;
+    margin: auto;
+}
+
+h2 {
+    color: #003366;
+}
+
+a {
+    color: #00a2e8;
+}
+
+.invalid-feedback {
+    display: block;
+}
+
+   </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 sidebar text-center">
+                <img src="logo.png" alt="Logo" class="img-fluid my-4">
+                <h5>#FacultyRegistration</h5>
+                <p>Any Questions?<br>Call us now.</p>
+                <button class="btn btn-primary btn-lg rounded-circle">📞</button>
+            </div>
+
+            <div class="col-md-9">
+                <div class="registration-form p-5">
+                    <h2>New Faculty Registration</h2>
+                    <p>Already registered? <a href="#">Sign In</a></p>
+                    
+                    <form id="facultyForm">
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="firstName">First Name*</label>
+                                <input type="text" class="form-control is-invalid" id="firstName" placeholder="Enter First Name" required>
+                                <div class="invalid-feedback">This field is required.</div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="middleName">Middle Name</label>
+                                <input type="text" class="form-control" id="middleName" placeholder="Enter Middle Name">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="surname">Surname*</label>
+                                <input type="text" class="form-control" id="surname" placeholder="Enter Surname" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="gender">Gender*</label>
+                                <select id="gender" class="form-control" required>
+                                    <option value="" selected>Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="mobile">Mobile(OTP verification needed)*</label>
+                                <input type="text" class="form-control" id="mobile" placeholder="Enter Contact No." required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="whatsapp">WhatsApp*</label>
+                                <input type="text" class="form-control" id="whatsapp" placeholder="Enter WhatsApp">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="sameAsMobile">
+                                    <label class="form-check-label" for="sameAsMobile">Same as Mobile</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="email">Email(OTP verification needed)*</label>
+                                <input type="email" class="form-control" id="email" placeholder="Use active email" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="country">Country*</label>
+                                <select id="country" class="form-control" required>
+                                    <option value="" selected>Select Country</option>
+                                    <option value="India">India</option>
+                                    <option value="USA">USA</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="state">State*</label>
+                                <select id="state" class="form-control" required>
+                                    <option value="" selected>Select State</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="district">District*</label>
+                                <select id="district" class="form-control" required>
+                                    <option value="" selected>Select District</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="taluka">Taluka*</label>
+                                <select id="taluka" class="form-control" required>
+                                    <option value="" selected>Select Taluka</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="city">City/Village*</label>
+                                <input type="text" class="form-control" id="city" placeholder="Enter City/Village" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Example JavaScript functionality for form validation
+document.getElementById('facultyForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Form Submitted');
+});
+
+// Sync WhatsApp and Mobile fields if 'Same as Mobile' is checked
+document.getElementById('sameAsMobile').addEventListener('change', function() {
+    const mobileField = document.getElementById('mobile');
+    const whatsappField = document.getElementById('whatsapp');
+    whatsappField.value = this.checked ? mobileField.value : '';
+});
+
+    </script>
+</body>
+</html>

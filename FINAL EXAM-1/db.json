@@ -1,0 +1,40 @@
+{
+  "questions": [
+    {
+      "id": "9d69",
+      "question": "what is javascript",
+      "option1": "a",
+      "option2": "b",
+      "option3": "c",
+      "option4": "d",
+      "correct": "a"
+    },
+    {
+      "id": "482e",
+      "question": "what is javascript",
+      "option1": "a",
+      "option2": "b",
+      "option3": "c",
+      "option4": "d",
+      "correct": "a"
+    },
+    {
+      "id": "dc22",
+      "question": "what is javascript",
+      "option1": "a",
+      "option2": "b",
+      "option3": "c",
+      "option4": "d",
+      "correct": "a"
+    },
+    {
+      "id": "242f",
+      "question": "what is javascript",
+      "option1": "a",
+      "option2": "b",
+      "option3": "c",
+      "option4": "d",
+      "correct": "a"
+    }
+  ]
+}
