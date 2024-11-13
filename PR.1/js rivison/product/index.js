@@ -133,7 +133,7 @@ const reverseTime = (hour, minute, second) => {
   };
   
   
-  reverseTime(1, 2, 10);
+  reverseTime(0, 0, 10);
   
 
 document.getElementById("form").addEventListener("submit", getFormData);
