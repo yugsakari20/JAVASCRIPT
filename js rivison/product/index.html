@@ -4,6 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* General styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Styling for the form */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="submit"] {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+/* Styling for product display and cart sections */
+#display, #cart {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+#display div, #cart div {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+    max-width: 150px;
+}
+
+/* Styling for the countdown timer */
+#main-div {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #display div, #cart div {
+        max-width: 100%;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="submit"] {
+        font-size: 0.9em;
+    }
+}
+
+    </style>
 </head>
 <body>
     <form id="form">
