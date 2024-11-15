@@ -1,7 +1,7 @@
 const productData = JSON.parse(localStorage.getItem("productData")) || [];
 
 const getData = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
     const product = {
         Name: document.getElementById("Name").value,
@@ -12,6 +12,7 @@ const getData = (e) => {
 
     productData.push(product);
     localStorage.setItem("productData", JSON.stringify(productData));
+    alert("Product added successfully!");
 };
 
 document.getElementById("form").addEventListener("submit", getData);
