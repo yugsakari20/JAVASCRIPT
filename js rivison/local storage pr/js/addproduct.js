@@ -4,8 +4,9 @@ const getData = (e) => {
     e.preventDefault();
 
     const product = {
+        id: Date.now(), 
         Name: document.getElementById("Name").value,
-        Price: document.getElementById("Price").value,
+        Price: document.getElementById("Price").value, 
         Image: document.getElementById("Image").value,
         category: document.getElementById("category").value
     };
