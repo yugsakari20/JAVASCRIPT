@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="/style/signup.css">
+    <title>signup</title>
+</head>
+<body>
+    <div id="navbar"></div>
+    <center><div class="signup-container">
+        <h1>Sign up</h1>
+        <form class="signup-form" id="signup">
+          <div class="form-group">
+            <input type="text" placeholder="Name" required id="name">
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Email" required id="email">
+            <span class="toggle-visibility">👁️</span>
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Password" required id="password">
+          </div>
+          <button type="submit" class="signup-btn">Sign Up</button>
+        </form>
+        <p class="login-link">
+          Already have an account? <a href="#">Log In</a>
+        </p>
+        <div class="divider">
+          <span>or</span>
+        </div>
+        <button class="google-btn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" alt="Google logo" class="google-icon">
+          Sign up with Google
+        </button>
+      </div></center>
+</body>
+<script src="/js/signup.js" type="module"></script>
+</html>
