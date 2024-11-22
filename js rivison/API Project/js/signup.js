@@ -24,5 +24,5 @@ const getData = async () => {
 }
 
 
-document.getElementById("signup").addEventListener("submit",handedata)
+document.getElementById("signup").addEventListener("submit",handedata);
 getData()

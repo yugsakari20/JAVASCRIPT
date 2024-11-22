@@ -11,15 +11,19 @@ const handleLogin = async (e) => {
     const password = document.getElementById("password").value;
 
     const users = await apimethod.get();
-    const user = users.find(u => u.email === email && u.password === password);
+    const user = users.filter((e) => e.email === email)
 
-    if (user) {
-        alert("Login successful!");
-    
-    } else {
-        alert("Invalid email or password. Please try again.");
+    if(user.length == 0){
+        alert("Email doesn`t exist!")
+        return
     }
-};
+    if (user[0].password !== password) {
+        alert("wrong password")
+        return
+    }
+    alert("login sus")
 
+    localStorage.setItem("isLogin",true)
+};
 
 document.getElementById("login").addEventListener("submit", handleLogin);
