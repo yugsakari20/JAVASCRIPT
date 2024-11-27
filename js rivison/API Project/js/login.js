@@ -1,29 +1,47 @@
-import apimethod from "../API/api.js";
+
+import { deleteproduct, productapi } from "../API/productapi.js";
 import navbar from "../components/navbar.js";
 
-document.getElementById("navbar").innerHTML = navbar();
+document.getElementById("navbar").innerHTML = navbar()
 
+const productary = await productapi.get();
+const isLogin = localStorage.getItem("isLogin") || false;
 
-const handleLogin = async (e) => {
-    e.preventDefault();
+if (!isLogin) {
+    alert("login first")
+    window.location.href="pages/login.html"
+}
 
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+const displayproduct = (data) => {
+    document.getElementById("display").innerHTML = "";
+    data.forEach((e) =>{
+        const div = document.createElement("div");
+        const productName = document.createElement("p");
+        const price = document.createElement("p");
+        const image = document.createElement("img");
+        const remove  = document.createElement("button");
+        const change = document.createElement("change");
+        
+        remove.addEventListener("click",()=> deleteproduct(e.id))
+        change.addEventListener("click",() => updateProducts(e))
 
-    const users = await apimethod.get();
-    const user = users.filter((e) => e.email === email)
+        productName.innerHTML = e.productName;
+        price.innerHTML = e.price;
+        image.src = e.image;
+        remove.innerHTML = "delete"
+        change.innerHTML = "update"
 
-    if(user.length == 0){
-        alert("Email doesn`t exist!")
-        return
-    }
-    if (user[0].password !== password) {
-        alert("wrong password")
-        return
-    }
-    alert("login sus")
+        div.append(image,productName,price,remove)
+        document.getElementById("display").append(div)
 
-    localStorage.setItem("isLogin",true)
-};
+    })
+}
 
-document.getElementById("login").addEventListener("submit", handleLogin);
+const updateProducts = (productupdate) => {
+    document.querySelector("# productName").value = productupdate.productName
+    document.querySelector("# price").value = productupdate.price
+    document.querySelector("# image").value = productupdate.image
+    document.querySelector("# submit").value = "Update"
+}
+
+displayproduct(productary)

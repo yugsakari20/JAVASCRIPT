@@ -1,4 +1,5 @@
-import productapi from "../API/productapi.js";
+
+import { deleteproduct, productapi } from "../API/productapi.js";
 import navbar from "../components/navbar.js";
 
 document.getElementById("navbar").innerHTML = navbar()
@@ -12,22 +13,35 @@ if (!isLogin) {
 }
 
 const displayproduct = (data) => {
-    const displayDiv = document.getElementById("display");
-    displayDiv.innerHTML = ""; 
-    data.map((product) => {
-        const productElement = document.createElement("div"); 
-        
+    document.getElementById("display").innerHTML = "";
+    data.forEach((e) =>{
+        const div = document.createElement("div");
         const productName = document.createElement("p");
-        productName.innerHTML = product.productName; 
-
         const price = document.createElement("p");
-        price.innerHTML = product.price;
-
         const image = document.createElement("img");
-        image.src = product.image;
+        const remove  = document.createElement("button");
+        const change = document.createElement("change");
+        
+        remove.addEventListener("click",()=> deleteproduct(e.id))
+        change.addEventListener("click",() => updateProducts(e))
 
-        productElement.append(productName,price,image); 
-        displayDiv.appendChild(productElement); 
-    });
-};
+        productName.innerHTML = e.productName;
+        price.innerHTML = e.price;
+        image.src = e.image;
+        remove.innerHTML = "delete"
+        change.innerHTML = "update"
+
+        div.append(image,productName,price,remove)
+        document.getElementById("display").append(div)
+
+    })
+}
+
+const updateProducts = (productupdate) => {
+    document.querySelector("# productName").value = productupdate.productName
+    document.querySelector("# price").value = productupdate.price
+    document.querySelector("# image").value = productupdate.image
+    document.querySelector("# submit").value = "Update"
+}
+
 displayproduct(productary)

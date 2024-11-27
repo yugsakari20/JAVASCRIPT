@@ -3,8 +3,6 @@ import navbar from "../components/navbar.js";
 
 document.getElementById("navbar").innerHTML = navbar();
 
-let userarray = [];
-console.log(userarray);
 
 
 const handedata = (e) => {
@@ -15,8 +13,8 @@ const handedata = (e) => {
         email:document.getElementById("email").value,
         password:document.getElementById("password").value
     }
-    userarray.push(user)
-    apimethod.post(userarray)
+    
+    apimethod.post(user)
 }
 
 const getData = async () => {

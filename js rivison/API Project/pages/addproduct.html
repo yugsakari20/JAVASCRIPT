@@ -4,37 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/index.css">
-    <title>Document</title>
+    <title>Add Product</title>
 </head>
 <body>
-    <center><div id="navbar"></div>
-    <div class="form-container">
-        <h1>Add Product</h1>
-        <form id="productForm">
-            <div class="form-group">
-                <label for="productName">Product Name:</label>
-                <input type="text" id="productName" placeholder="Enter product name">
-                <small class="error-message">Product Name is required</small>
-            </div>
-            <div class="form-group">
-                <label for="description">Description:</label>
-                <textarea id="description" placeholder="Enter description"></textarea>
-                <small class="error-message">Description is required</small>
-            </div>
-            <div class="form-group">
-                <label for="price">Price:</label>
-                <input type="number" id="price" placeholder="Enter price">
-                <small class="error-message">Price is required</small>
-            </div>
-            <div class="form-group">
-                <label for="image">Image:</label>
-                <input type="url" id="image" placeholder="enter url">
-                <small class="error-message">Image is required</small>
-            </div>
-            <button type="submit" class="submit-btn">Add Product</button>
-        </form>
-    </div> 
-</center>
+
+    <div id="navbar"></div>
+    
+
+    <center>
+        <div class="form-container">
+            <h1>Add Product</h1>
+            <form id="productForm">
+                <div class="form-group">
+                    <label for="productName">Product Name:</label>
+                    <input type="text" id="productName" placeholder="Enter product name">
+                    <small class="error-message">Product Name is required</small>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" placeholder="Enter description"></textarea>
+                    <small class="error-message">Description is required</small>
+                </div>
+                <div class="form-group">
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" placeholder="Enter price">
+                    <small class="error-message">Price is required</small>
+                </div>
+                <div class="form-group">
+                    <label for="image">Image:</label>
+                    <input type="url" id="image" placeholder="Enter image URL">
+                    <small class="error-message">Image is required</small>
+                </div>
+                <button type="submit" class="submit-btn" id="submit">Add Product</button>
+            </form>
+        </div>
+    </center>
+
+    <!-- JavaScript File -->
+    <script src="/js/addproduct.js" type="module"></script>
 </body>
-<script src="/js/addproduct.js" type="module"></script>
 </html>

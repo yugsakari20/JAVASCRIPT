@@ -1,9 +1,8 @@
-import productapi from "../API/productapi.js";
+import { productapi} from "../API/productapi.js";
 import navbar from "../components/navbar.js";
 
 document.getElementById("navbar").innerHTML = navbar()
 
-let productarray = []
 
 const handproduct = async (e) =>{
     e.preventDefault();
@@ -13,8 +12,9 @@ const handproduct = async (e) =>{
         price: document.getElementById("price").value,
         image: document.getElementById("image").value
     }
-    productarray.push(product)
-    productapi.post(productarray)
+    
+    productapi.post(product)
+
 }
 const getData = async () => {
     productarray = await  productapi.get()
