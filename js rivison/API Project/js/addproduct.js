@@ -1,4 +1,5 @@
 import { productapi} from "../API/productapi.js";
+import { Logout } from "../components/helper.js";
 import navbar from "../components/navbar.js";
 
 document.getElementById("navbar").innerHTML = navbar()
@@ -22,4 +23,5 @@ const getData = async () => {
 
 
 document.getElementById("productForm").addEventListener("submit",handproduct)
+document.getElementById("Logout").addEventListener("click",Logout)
 getData()

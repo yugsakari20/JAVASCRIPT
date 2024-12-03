@@ -1,6 +1,6 @@
-const url = "http://localhost:3000/users"
+const url = "http://localhost:3000/cart"
 
-const apimethod = {
+const cartApi = {
     get: async () =>{
         const req = await fetch(url)
         const res = await req.json();
@@ -16,14 +16,4 @@ const apimethod = {
         })
     }
 }
-
-const userupdate = async (data, id) => {
-    await fetch(`${url}/${id}`,{
-        method: "PATCH",
-        headers:{
-            "content-type": "application/json"
-        },
-        body: JSON.stringify(data)
-    })
-}
-export {apimethod,userupdate}
+export {cartApi}

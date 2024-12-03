@@ -4,8 +4,48 @@
       "id": "6260",
       "name": "SAKARIYA YUG SANJAYBHAI",
       "email": "yugsakariya976@gmail.com",
-      "password": "yug58585"
+      "password": "yug58585",
+      "cart": []
+    },
+    {
+      "id": "0f70",
+      "name": "raj savani",
+      "email": "raj78@g.c",
+      "password": "yug7878",
+      "cart": []
     }
   ],
-  "products": []
+  "products": [
+    {
+      "id": "46ec",
+      "productName": "t shirt",
+      "price": "2000",
+      "image": "https://th.bing.com/th/id/OIP.eh5RRJ5l1pqHQDN1ubb1VAHaEx?w=266&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+    },
+    {
+      "id": "33ae",
+      "productName": "t shirt",
+      "price": "2000",
+      "image": "https://th.bing.com/th/id/OIP.eh5RRJ5l1pqHQDN1ubb1VAHaEx?w=266&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+    },
+    {
+      "id": "4292",
+      "productName": "t shirt",
+      "price": "2000",
+      "image": "https://th.bing.com/th/id/OIP.eh5RRJ5l1pqHQDN1ubb1VAHaEx?w=266&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+    },
+    {
+      "id": "e790",
+      "productName": "t shirt",
+      "price": "2000",
+      "image": "https://th.bing.com/th/id/OIP.eh5RRJ5l1pqHQDN1ubb1VAHaEx?w=266&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+    },
+    {
+      "id": "fe26",
+      "productName": "t shirt",
+      "price": "2000",
+      "image": "https://th.bing.com/th/id/OIP.eh5RRJ5l1pqHQDN1ubb1VAHaEx?w=266&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+    }
+  ],
+  "cart": []
 }

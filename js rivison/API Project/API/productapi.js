@@ -1,4 +1,4 @@
-const url = "http://localhost:3001/products"
+const url = "http://localhost:3000/products"
 
 const productapi = {
     get: async () =>{

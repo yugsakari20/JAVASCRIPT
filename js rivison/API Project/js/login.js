@@ -1,47 +1,32 @@
-
-import { deleteproduct, productapi } from "../API/productapi.js";
+import apimethod from "../API/api.js";
 import navbar from "../components/navbar.js";
 
-document.getElementById("navbar").innerHTML = navbar()
+document.getElementById("navbar").innerHTML = navbar();
 
-const productary = await productapi.get();
-const isLogin = localStorage.getItem("isLogin") || false;
+const handleLogin = async (e) => {
+    e.preventDefault();
 
-if (!isLogin) {
-    alert("login first")
-    window.location.href="pages/login.html"
-}
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-const displayproduct = (data) => {
-    document.getElementById("display").innerHTML = "";
-    data.forEach((e) =>{
-        const div = document.createElement("div");
-        const productName = document.createElement("p");
-        const price = document.createElement("p");
-        const image = document.createElement("img");
-        const remove  = document.createElement("button");
-        const change = document.createElement("change");
-        
-        remove.addEventListener("click",()=> deleteproduct(e.id))
-        change.addEventListener("click",() => updateProducts(e))
+    const users = await apimethod.get();
+    const user = users.find((u) => u.email === email);
 
-        productName.innerHTML = e.productName;
-        price.innerHTML = e.price;
-        image.src = e.image;
-        remove.innerHTML = "delete"
-        change.innerHTML = "update"
+    if (!user) {
+        alert("Email doesn't exist!");
+        return;
+    }
 
-        div.append(image,productName,price,remove)
-        document.getElementById("display").append(div)
+    if (user.password !== password) {
+        alert("Wrong password");
+        return;
+    }
 
-    })
-}
+    alert("Login successful!");
 
-const updateProducts = (productupdate) => {
-    document.querySelector("# productName").value = productupdate.productName
-    document.querySelector("# price").value = productupdate.price
-    document.querySelector("# image").value = productupdate.image
-    document.querySelector("# submit").value = "Update"
-}
+    localStorage.setItem("isLogin", true);
+    localStorage.setItem("userId", JSON.stringify(user[0].id));
+    window.location.href = "index.html"; 
+};
 
-displayproduct(productary)
+document.getElementById("login").addEventListener("submit", handleLogin);
