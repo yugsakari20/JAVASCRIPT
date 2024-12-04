@@ -16,8 +16,7 @@ const apimethod = {
         })
     }
 }
-
-const userupdate = async (data, id) => {
+const updateUser = async (data, id) => {
     await fetch(`${url}/${id}`,{
         method: "PATCH",
         headers:{
@@ -26,4 +25,6 @@ const userupdate = async (data, id) => {
         body: JSON.stringify(data)
     })
 }
-export {apimethod,userupdate}
+
+
+export { apimethod,updateUser }

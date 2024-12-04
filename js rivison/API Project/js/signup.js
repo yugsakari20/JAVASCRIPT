@@ -1,4 +1,4 @@
-import apimethod from "../API/api.js";
+import {apimethod} from "../API/api.js";
 import navbar from "../components/navbar.js";
 
 document.getElementById("navbar").innerHTML = navbar();

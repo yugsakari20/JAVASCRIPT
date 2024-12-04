@@ -1,5 +1,5 @@
-import { userupdate } from "../API/api.js";
-import { deleteproduct, productapi } from "../API/productapi.js";
+import { updateUser } from "../API/api.js";
+import { deleteproduct, productapi, updateProduct } from "../API/productapi.js";
 import { Logout } from "../components/helper.js";
 import navbar from "../components/navbar.js";
 
@@ -47,7 +47,6 @@ const addtocart = async (elem) => {
 
     let existproduct = false;
 
-
     data.cart.map((e) => {
         if (e.id === elem.id) {
             e.qty++;
@@ -59,7 +58,7 @@ const addtocart = async (elem) => {
         data.cart.push({ ...elem, qty: 1 });
     }
 
-    await userupdate.PATCH(`/user/${userId}`);
+    await  updateUser.PATCH(`/user/${userId}`);
 };
 addtocart()
 Logout();

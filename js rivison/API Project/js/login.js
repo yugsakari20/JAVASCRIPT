@@ -1,4 +1,4 @@
-import apimethod from "../API/api.js";
+import {apimethod} from "../API/api.js";
 import navbar from "../components/navbar.js";
 
 document.getElementById("navbar").innerHTML = navbar();
@@ -25,8 +25,8 @@ const handleLogin = async (e) => {
     alert("Login successful!");
 
     localStorage.setItem("isLogin", true);
-    localStorage.setItem("userId", JSON.stringify(user[0].id));
-    window.location.href = "index.html"; 
+    localStorage.setItem("userId", JSON.stringify(user.id));
+    window.location.href = "/index.html"; 
 };
 
 document.getElementById("login").addEventListener("submit", handleLogin);
