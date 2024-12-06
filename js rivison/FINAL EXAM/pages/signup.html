@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<body>
+    <div id="navbar"></div>    
+
+    <form id="signupForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <select id="role">
+            <option value="user" selected>User</option>
+            <option value="admin">Admin</option>
+        </select>
+        <input type="submit" value="Sign Up">
+    </form>
+
+    <script src="/js/signup.js" type="module"></script>
+</body>
+</html>
