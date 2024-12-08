@@ -3,22 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
     <title>Document</title>
 </head>
 <body>
     
-
-<nav>
-    <a href="/index.html">Home</a>
-    <a href="/pages/signup.html">signup</a>
-    <select name="" id="select">
-        <option>user</option>
-        <option>addmin</option>
-    </select>
-    <a href="/pages/login.html">Login</a>
-    <a href="/pages/cart.html">Cart</a>
-    <a href="/pages/addproduct.html">addproduct</a>
-</nav>
-
+    <nav class="navbar">
+        <div class="logo">LOGOBAKERY</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">cart</a>
+            <a href="#">addProduct</a>
+            <a href="#">Login</a>
+            <a href="#">signup</a>
+            <a href="#" class="contact-btn"></a>
+        </div>
+    </nav>
+    
+    const navbar = () => {
+        const role = localStorage.getItem("role");
+    
+        return `
+        <nav id="navbar">
+            <div class="logo">LOGOBAKERY</div>
+            <div class="nav-links">
+            <a href="/index.html">Home</a>
+            <a href="/pages/signup.html">Signup</a>
+            <a href="/pages/login.html">Login</a>
+            <a href="/pages/cart.html">Cart</a>
+            ${role === "admin" ? '<a href="/pages/addproduct.html">Add Product</a>' : ""}
+        </nav>`;
+    </div>
+    };
+    
+    export default navbar;
+    
 </body>
 </html>

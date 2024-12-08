@@ -29,7 +29,7 @@ const handLogin = async(e) => {
     alert("Login suc")
 
     localStorage.setItem("isLogin", true)
-    localStorage.setItem("userData", JSON.stringify(user[0]))
+    localStorage.setItem("userId", JSON.stringify(user.id));                
     localStorage.setItem("role", user.role); 
 
 }

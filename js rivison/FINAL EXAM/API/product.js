@@ -15,20 +15,25 @@ const productApi = {
             body:JSON.stringify(data),
         });
     },
-    delete:async (id) => {
-        await fetch(`${url}/${id}`,{
-            method:"DELETE",
-        });
-    },
     patch: async (id, data) => {
         await fetch(`${url}/${id}`, {
           method: "PATCH",
-          headers: { "content-type": "application/json" },
+          headers: 
+          { "content-type": "application/json" 
+            
+          },
           body: JSON.stringify(data),
         });
       },
 }
+const deleteproduct = async (id) => {
+    await fetch(`${url}/${id}`,{
+        method:"delete"
+    })
+    window.location.reload();
+}
 
 
 
-export { productApi }
+
+export { productApi, deleteproduct }

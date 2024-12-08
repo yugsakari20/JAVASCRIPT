@@ -1,6 +1,9 @@
-import { productApi} from "../API/product.js";
+import { deleteproduct, productApi} from "../API/product.js";
 import navbar from "../componets/navbar.js";
+import handleLogout from "../componets/helper.js"
 
+
+const role = localStorage.getItem("role");
 
 document.getElementById("navbar").innerHTML = navbar()
 
@@ -11,7 +14,11 @@ if (!isLogin) {
     window.location.href = "/pages/login.html"
 
 }
+if (role !== "admin") {
+    alert("You do not have permission to delete products.");
 
+  }
+  
 let userarray = await productApi.get()
 
 const displayProduct = async (data) => {
@@ -26,9 +33,10 @@ const displayProduct = async (data) => {
         const remove = document.createElement("button");
         const addcart = document.createElement("button");
 
-        remove.addEventListener("click",() => productApi.delete(e.id))
+        remove.addEventListener("click",() => deleteproduct(e.id))
         addcart.addEventListener("click",() => addtocart(e));
-    
+      
+          
         name.innerHTML = e.name;
         price.innerHTML = e.price;
         catagorey.innerHTML = e.catagorey;
@@ -43,7 +51,7 @@ const displayProduct = async (data) => {
 }
 
 const addtocart = async (elem) => {
-    let user = JSON.parse(localStorage.getItem("userData"));
+    let user = JSON.parse(localStorage.getItem("userId"));
     await productApi.get(`/cart/${user}`);
 
     let existproduct = false;
@@ -63,3 +71,4 @@ const addtocart = async (elem) => {
 };
 
 displayProduct(userarray)
+handleLogout()
