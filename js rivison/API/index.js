@@ -37,4 +37,3 @@ const displayproduct = (data) => {
         displayDiv.appendChild(productElement); 
     });
 };
-getData();

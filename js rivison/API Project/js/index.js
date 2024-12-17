@@ -1,5 +1,5 @@
 import { updateUser } from "../API/api.js";
-import { deleteproduct, productapi, updateProduct } from "../API/productapi.js";
+import { deleteproduct, productapi } from "../API/productapi.js";
 import { Logout } from "../components/helper.js";
 import navbar from "../components/navbar.js";
 
@@ -14,7 +14,7 @@ if (!isLogin) {
 
 const productary = await productapi.get();
 
-const displayproduct = (data) => {
+const displayproduct = async(data) => {
     document.getElementById("display").innerHTML = "";
     data.forEach((e) => {
         const div = document.createElement("div");
@@ -60,7 +60,38 @@ const addtocart = async (elem) => {
 
     await  updateUser.PATCH(`/user/${userId}`);
 };
-addtocart()
+const filterCategory = () => {
+    const categoryValue = document.getElementById("category").value.toLowerCase();
+  
+    const resultCategory = productData.filter(
+      (product) => product.category.toLowerCase() === categoryValue
+    );
+  
+    displayproduct(resultCategory);
+  };
+  
+  document.getElementById("Filter").addEventListener("click", filterCategory);
+  
+  const sortProduct = () => {
+    const sortValue = document.getElementById("sort").value;
+
+    if (sortValue === "LTH") {
+        productary.sort((a, b) => a.price - b.price);
+    } else if (sortValue === "HTL") {
+        productary.sort((a, b) => b.price - a.price);
+    }
+
+    displayproduct(productary);
+};
+
+document.getElementById("Sort").addEventListener("click", sortProduct);
+
+// Refresh Product List
+const refreshProducts = async () => {
+    const updatedProducts = await productapi.get();
+    displayproduct(updatedProducts);
+};
 Logout();
 displayproduct(productary);
+
 

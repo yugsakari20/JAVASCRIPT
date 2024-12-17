@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <title>login</title>
+</head>
+<body>
+    <div id="navbar"></div>
+    <center><div class="login-container">
+        <div class="form-box">
+          <h2>Login</h2>
+          <form id="login">
+            <div class="input-box">
+              <input type="email" placeholder="Email" id="email"required>
+            </div>
+            <div class="input-box">
+              <input type="password" placeholder="Password" id="password" required>
+              <span class="toggle-password">👁️</span>
+            </div>
+            <p class="forgot-password"><a href="#">Forgot password?</a></p>
+            <button type="submit" class="login-btn">Login</button>
+            <p class="signup-link">Don't have an account? <a href="#">Signup</a></p>
+            <div class="divider">
+              <hr> <span>Or</span> <hr>
+            </div>
+            <button class="social-btn facebook-btn">
+              Login with Facebook
+            </button>
+            <button class="social-btn google-btn">
+              Login with Google
+            </button>
+          </form>
+        </div>
+      </div>
+    </center>
+<script src="/JS/login.js" type="module"></script>
+</body>
+</html>

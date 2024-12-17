@@ -4,11 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/index.css">
-    <title>Document</title>
+    <title>Product Page</title>
 </head>
 <body>
     <div id="navbar"></div>
+
+    <div id="filters">
+        <label for="category">Filter by Category:</label>
+        <input type="text" id="category" placeholder="Enter category">
+        <button id="Filter">Filter</button>
+
+        <label for="sort">Sort by Price:</label>
+        <select id="sort" name="sort">
+            <option value="">Select Order</option>
+            <option value="LTH">Low to High</option>
+            <option value="HTL">High to Low</option>
+        </select>
+        <button id="Sort">Sort</button>
+    </div>
+
     <div id="display"></div>
+
+    <script src="/js/index.js" type="module"></script>
 </body>
-<script src="/js/index.js" type="module"></script>
 </html>

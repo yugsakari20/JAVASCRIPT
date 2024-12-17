@@ -1,6 +1,6 @@
 let url="http://localhost:3000/user"
 const userApi = {
-    get: async () =>{
+    get: async (dataaa) =>{
         const req = await fetch(url)
         const res = await req.json();
         return await res;
@@ -13,7 +13,7 @@ const userApi = {
             },
             body:JSON.stringify(data),
         });
-    },
+    },  
    
 }
 

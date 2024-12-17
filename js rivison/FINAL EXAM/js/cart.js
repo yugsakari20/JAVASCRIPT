@@ -43,3 +43,4 @@ const removeFromCart = async (productId) => {
 };
 
 displayCart();
+handleLogout()

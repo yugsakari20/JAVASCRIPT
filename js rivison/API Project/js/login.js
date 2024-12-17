@@ -25,7 +25,7 @@ const handleLogin = async (e) => {
     alert("Login successful!");
 
     localStorage.setItem("isLogin", true);
-    localStorage.setItem("userId", JSON.stringify(user.id));
+    localStorage.setItem("userData", JSON.stringify(user[0]))
     window.location.href = "/index.html"; 
 };
 

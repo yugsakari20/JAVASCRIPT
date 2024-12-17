@@ -1,6 +1,7 @@
 import { deleteproduct, productApi} from "../API/product.js";
 import navbar from "../componets/navbar.js";
 import handleLogout from "../componets/helper.js"
+import { userApi } from "../API/userapi.js";
 
 
 const role = localStorage.getItem("role");
@@ -14,10 +15,7 @@ if (!isLogin) {
     window.location.href = "/pages/login.html"
 
 }
-if (role !== "admin") {
-    alert("You do not have permission to delete products.");
 
-  }
   
 let userarray = await productApi.get()
 
@@ -52,21 +50,24 @@ const displayProduct = async (data) => {
 
 const addtocart = async (elem) => {
     let user = JSON.parse(localStorage.getItem("userId"));
-    await productApi.get(`/cart/${user}`);
+    user= await userApi.get( `/${user}`);
+   console.log(user);
+   
 
-    let existproduct = false;
-    const productary = await productApi.get();
-    productary.map((e) => {
-        if (e.id === elem.id) {
-            e.qty++;
-            existproduct = true;
-        }
-    });
-    if (!existproduct) {
-        productary.push({...elem, qty:1})
-    }
-    await productApi.patch(`${elem.id}`, {qty: elem.qty + 1});
-    console.log(productary);
+
+    // let existproduct = false;
+    // const productary = await productApi.get();
+    // productary.map((e) => {
+    //     if (e.id === elem.id) {
+    //         e.qty++;
+    //         existproduct = true;
+    //     }
+    // });
+    // if (!existproduct) {
+    //     productary.push({...elem, qty:1})
+    // }
+    // await productApi.patch(`${elem.id}`, {qty: elem.qty + 1});
+    // console.log(productary);
     
 };
 
