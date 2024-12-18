@@ -1,25 +1,33 @@
 import { navbar } from "../navbar/navbar.js";
 
-document.getElementById("navbar").innerHTML = navbar()
+document.getElementById("navbar").innerHTML = navbar();
 
+let cart = JSON.parse(localStorage.getItem("cart")) || []; 
 
 const displayCart = (data) => {
-    document.getElementById("displayCart").innerHTML = ""
-    data.map((e) => {
-        const div = document.createElement("div");
+  const cartContainer = document.getElementById("displayCart");
+  cartContainer.innerHTML = "";
 
-        const name = document.createElement("p");
-        const catagorey = document.createElement("p");
-        const price = document.createElement("p");
-        const image = document.createElement("img");
+  data.forEach((e) => {
+    const div = document.createElement("div");
 
+    const name = document.createElement("p");
+    const category = document.createElement("p");
+    const price = document.createElement("p");
+    const image = document.createElement("img");
+    const qty = document.createElement("p");
 
-        name.innerHTML = e.name;
-        catagorey.innerHTML = e.catagorey;
-        price.innerHTML = e.price;
-        image.src = e.image;
+    name.innerHTML = e.name;
+    category.innerHTML = `Category: ${e.catagorey}`;
+    price.innerHTML = `Price: ₹${e.price}`;
+    image.src = e.image;
+    qty.innerHTML = `Quantity: ${e.qty}`;
 
-        div.append(image, name, catagorey, price);
-        
-    })
-}
+   
+    div.append(image, name, category, price, qty);
+    cartContainer.append(div);
+  });
+
+};
+
+displayCart(cart);
