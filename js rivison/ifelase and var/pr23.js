@@ -100,17 +100,24 @@
 //     console.log(inputString[i]);
 // }
 
+// let array = [1,2,3,4]
+// let n = array.length;
+// let sum = 0;
+
+// for(let i = 0; i < n; i++){
+//    if (array[i] % 2 == 0) {
+//       sum += array[i]
+//    }
+// }
+
+// console.log(sum);
 
 
-let a = 10;
-let sum = 0;
+let a = 25;
+let sum = 0
+for(let i = 0; i < a; i++){
 
+   sum += i
 
-for (let i = 0; i < a; i++) {
- if (i % 2 !== 0) {
-    sum += i; 
-
- }
-    
 }
 console.log(sum);

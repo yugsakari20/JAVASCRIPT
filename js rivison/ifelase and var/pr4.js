@@ -13,17 +13,29 @@
 // console.log(squre);
 
 
-let array = [1,2,3,4,5,6,7,8,9,10,11]
+// let array = [1,2,3,4,5,6,7,8,9,10]
+// let n  =  array.length;
+// let sum = 0;
 
+
+// for(let i = 0; i < n; i++){
+//     sum += array[i]
+// }
+// if (sum %2 === 0) {
+//     console.log("even");
+// }
+// else{
+//     console.log("odd");
+// }
+
+let array = [1,2,3,4,5,6,7,8,9,10]
+let n = array.length;
 let sum = 0;
 
-for (let i = 0; i < array.length; i++) {
-   sum += [i]
+
+for(let i = 0; i < n; i++){
+    if (array[i] % 2 == 0 ) {
+        sum += array[i]
+    }
 }
-if (sum % 2 === 0) {
-    console.log("even");
-}
-else{
-    console.log("odd");
-    
-}
+console.log(sum);
